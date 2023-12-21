@@ -35,13 +35,14 @@ plot(x2,y2, 'or');
 H = householder([x1, y1], [x2, y2]);
 
 v = [x2-x1; y2-y1];
+
 v_tukrozott = H * v;
 
 % Tükörzött pont kinyerése
 x_tukrozott = v_tukrozott(1);
 y_tukrozott = v_tukrozott(2);
 
-plot(x_tukrozott, y_tukrozott, 'og'); % Zöld pont a tükörzött pontra
+plot(x_tukrozott, y_tukrozott, 'og'); % Tükrözött pont
 
 % Egyenes ábrázolása, ami a tükröző hipersíkot jelképezi
 d = [x2 - x1, y2 - y1];

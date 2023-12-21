@@ -7,6 +7,7 @@ function result = fl4(n1, n2)
 % Példa: [01101|3]+[10110|3]=[10010|4]
 % Példa: [10110|3]+[11010|2]=[10010|4]
 % 0100001 + 0111104
+% fl4([0 1 1 0 1 0 2], [0 1 0 0 1 0 2])
 
 if ~isvector(n1) || ~isvector(n2)
     error('n1 és n2 csak vektor lehet.');

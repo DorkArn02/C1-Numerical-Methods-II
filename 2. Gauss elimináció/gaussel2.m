@@ -4,8 +4,8 @@ function [x] = gaussel2(A, b, p1, p2)
 % p1 = 0 akkor részleges, p1 = 1 akkor teljes főelem kiv.
 % p2 = 0 akkor nem íratjuk ki a közbeeső mátrixok egyébként igen
 % Visszatérés: x megoldásvektor
-% Pl.: gaussel2([1 -1 2; 2 3 1; 3 2 1], [3;5;8], 1) => [2.8, -0.2, 0]
-% Pl.: gaussel2([2 1 3; 4 4 7; 2 5 9], [1;1;3], 0) => [-0.5, -1, 1]
+% Pl.: gaussel2([1 -1 2; 2 3 1; 3 2 1], [3;5;8], 1, 1) => [2.8, -0.2, 0]
+% Pl.: gaussel2([2 1 3; 4 4 7; 2 5 9], [1;1;3], 0, 0) => [-0.5, -1, 1]
 
 % Részleges főelemkiválasztást válaszott a felhasználó
 if p1 == 0
@@ -72,11 +72,11 @@ if p1 == 0
     end
 else
     % Teljes főelemkiválasztást választott a felhasználó
-    x = teljesFoelemKiv(A, b);
+    x = teljesFoelemKiv(A, b, p2);
 end
 end
 
-function [x]= teljesFoelemKiv(A, b)
+function [x]= teljesFoelemKiv(A, b, p2)
 % n mátrix mérete
 n = max(size(A));
 A = [A, b];

@@ -3,7 +3,7 @@ function mtx = affin2(p,q,r,P,Q,R)
 % Bemenet: Háromszög csúcsai és képei koordinátái
 % Kimenet: Transzformáció mátrixa
 % Példa: affin2([10, 30], [15, 40], [20, 30], [30, 30], [40, 60], [50, 30])
-
+format default;
 % Van-e 6 db csúcs megadva?
 % Ha nincs kérjük be grafikusan
 if(nargin ~= 6)

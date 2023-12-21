@@ -5,6 +5,12 @@ function F = lagrangeip(x, y, graf)
 % Példa bemenet: lagrangeip([1, 4, 9],[1, 2, 3], 1)
 % lagrangeip([-2,2,-1, 0],[27,19,10, 3], 1)
 
+% Pl.:
+% l_0(x) = (x-4)(x-9)/(1-4)(1-9)=1/24 (x-4)(x-9) 
+% l_1(x) = (x-1)(x-9)/(4-1)(4-9)=-1/15 (x-1)(x-9) 
+% l_2(x) = (x-1)(x-4)/(9-1)(9-4)=1/40 (x-1)(x-4) 
+% L2(x) = 1*l_0(x)+2*l_1(x)+3*l_2(x)
+
 n = length(x);
 
 if n ~= length(y)

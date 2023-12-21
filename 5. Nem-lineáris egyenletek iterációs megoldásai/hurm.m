@@ -20,7 +20,8 @@ for k = 1:n
 
     % Gyök találatának ellenőrzése
     if f(c) == 0
-        break;
+        root = c;
+        return;
     end
 
     % Az intervallum aktualizálása

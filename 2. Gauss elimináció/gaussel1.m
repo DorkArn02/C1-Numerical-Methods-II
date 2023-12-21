@@ -8,6 +8,7 @@ function [x] = gaussel1(A, b, p1, p2)
 % Túlhatározott -> több egyenlet, mint ismeretlen
 % Pl. gaussel1([1 2 -1; 2 -1 3; -1 3 1], [4;3;6], 1, 1) => [1;2;1]
 % Pl. gaussel1([3 -7 -2 2; -3 5 1 0; 6 -4 0 -5; -9 5 -5 12],[-9;5;7;11], 0, 1)
+% gaussel1([1 -2 5; 1 -1 3; 3 -6 -1], [9;2;25], 0, 0)
 
 % Ha az A mátrix sorainak száma nem egyezik meg b vektoréval
 % b oszlopainak száma csak 1 lehet

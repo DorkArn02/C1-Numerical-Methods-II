@@ -35,14 +35,14 @@ spec = max(abs(eigenvalues));
 % Ne törölje az előző plotot
 hold on;
 ylim([0, Inf])
-
+% Sajátértékek abszolútértékének ábrázolása
 fplot(abs(eigenvalues(1)));
 fplot(abs(eigenvalues(2)));
 fplot(abs(eigenvalues(3)));
 fplot(spec, 'Color', 'r', 'LineWidth', 1.5);
 yline(1, 'Color', 'g')
 
-legend('\lambda_1(ω)', '\lambda_2(ω)', '\lambda_3(ω)', '\omega_{B_{JO}}', 'y=1');
+legend('\lambda_1(\omega)', '\lambda_2(\omega)', '\lambda_3(\omega)', '\omega_{B_{JO}}', 'y=1');
 
 % Konvergenciatartomány meghatározása
 omega_values = linspace(0, 2, 1000);

@@ -13,9 +13,11 @@ if numel(csomopontokX) ~= numel(csomopontokY)
 end
 
 % Legkisebb négyzetek módszere a polinomra
+% Polinom illesztése
 coefficients = polyfit(csomopontokX, csomopontokY, polinomFokszama);
 
 % Kiszámítjuk a közelítő polinom értékeit az adott csomópontoknál
+% Polinom kiértékelése
 fittedPolynomial = polyval(coefficients, csomopontokX);
 
 % Kiírjuk a közelítő polinom együtthatóit

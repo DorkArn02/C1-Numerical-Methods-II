@@ -9,6 +9,7 @@ function result = fl1(vec)
 % [100001| 3] => 4.125
 % [10101010| −2] =>  0.166015625
 % Visszatér: Gépi szám értéke
+% fl1([0 1 0 0 0 0 1 3])
 
 % Vektort adtunk-e meg?
 if ~isvector(vec)

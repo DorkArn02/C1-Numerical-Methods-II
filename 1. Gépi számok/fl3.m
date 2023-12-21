@@ -2,9 +2,13 @@ function result = fl3(varargin)
 % Valós számok gépi alakját kiszámoló függvény
 % Bemenet: M(t, k1, k2) gépi számhalmaz és number valós szám
 % Megkötések:
-% t természetes szám, k1, k2 egészek és k1 < k2
+% t mantissza természetes szám, k1, k2 egészek és k1 < k2 (karakterisztika)
 % Kimenet: Gépi szám alakja a valós számnak
 % Példa: M(5, -3, 4) és a számok: 4.18, 10.85, sqrt(2), 1/10, -1/3
+% fl3(6, -4, 4, 4.21) => [0 100010 3]
+% fl3(6, -4, 4, 0.11) => [0 111000 -3]
+% fl3(8, -4, 4, 1/6) => [0 10101011 -2]
+% fl3(6, -3, 3, sqrt(2)) => [0 101101 1]
 
 % Ha csak egy számot adunk meg, akkor használjuk a feladatban leírtakat
 if nargin == 1

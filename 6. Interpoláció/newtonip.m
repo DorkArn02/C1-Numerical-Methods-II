@@ -5,6 +5,18 @@ function interpolated_poly = newtonip(x_vals, y_vals)
 % y_vals: A bemenő függvényértékek (vektor)
 % interpolated_poly: Az interpolációs polinom Newton-alakja
 % Kimenet: Int. pol. Newton-alakja
+% newtonip([-2 -1 0 1 2], [-15 -4 -1 0 5])
+% newtonip([1 4 9], [2 3 4])
+
+% Osztott differenciák pl. 1 esetén:
+% x_i f(x_i) f[x_i, x_i+1] ... ... ... 
+% -2   -15      
+% -1   -4     -4-(-15)/-1-(-2)=11
+%  0   -1     3   3-11/0-(-2)=-4
+%  1    0     1   -1    1
+%  2    5     5    2    1  0
+
+% N_4(x) = x^3x^2+x-1
 
 % Ellenőrzés, hogy a bemenő vektorok azonos méretűek legyenek
 if length(x_vals) ~= length(y_vals)
@@ -37,7 +49,10 @@ end
 
 % Az interpolációs polinom kiértékelése és megjelenítése
 disp('Az interpolációs polinom:');
-disp(interpolated_poly);
+
+interpolated_poly = simplify(interpolated_poly);
+
+disp(interpolated_poly); % Összevonja a dolgokat...
 
 % Felhasználói input a további alappontok hozzáadásához
 choice = input('Szeretne új alappontot hozzáadni? (igen: 1, nem: 0): ');
